@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercicio 1</title>
+	<script type="text/javascript">
+		var filmes = '{"filme":[{"nomeFilme":"Gasparzinho","Ano":2010,"cenas": [{"cena":"introdução","duracao":"30 minutos","cenario":"ambiente rural"}, {"cena":"ação","duracao":"20 minutos","cenario":"ambiente urbano"}]}'+ ',{"nomeFilme":"Família Adams","Ano":1995,"cenas":[{"cena":"introdução","duracao":"15 minutos","cenario":"castelo mal-assombrado"},{"cena":"final","duracao":"10 minutos","cenario":"castelo bem-assombrado"}]}]}';
+    var resultado = JSON.parse(filmes);
+    document.write("<p>Filmes:</p>");
+ 	var gasp = resultado.filme[0].nomeFilme; 
+ 	//document.write("<ol>");
+ 	document.write("<p>"+gasp+"</p>");
+ 	//document.write("</ol>");
+ 	document.write("<p>"+resultado.filme[0].Ano+"</p>");
+ 	document.write("<p>Cenas:</p>");
+ 	document.write("<ol>");
+
+	document.write("<li>Cena 0</li>");
+	document.write("<ol>")
+    document.write("<li>" + resultado.filme[0].cenas[0].cena + "</li>");
+    document.write("<li>" + resultado.filme[0].cenas[0].duracao + "</li>");
+    document.write("<li>" + resultado.filme[0].cenas[0].cenario + "</li>");
+    document.write("</ol>")
+
+    document.write("<li>Cena 1</li>");
+	document.write("<ol>")
+    document.write("<li>" + resultado.filme[0].cenas[1].cena + "</li>");
+    document.write("<li>" + resultado.filme[0].cenas[1].duracao + "</li>");
+    document.write("<li>" + resultado.filme[0].cenas[1].cenario + "</li>");
+	document.write("</ol>")
+	document.write("<ol>")
+
+	document.write("<p>"+resultado.filme[1].nomeFilme +"</p>")
+ 	document.write("<p>"+resultado.filme[1].Ano+"</p>");
+
+    document.write("<li>Cena 1</li>");
+	document.write("<ol>")
+    document.write("<li>" + resultado.filme[1].cenas[0].cena + "</li>");
+    document.write("<li>" + resultado.filme[1].cenas[0].duracao + "</li>");
+    document.write("<li>" + resultado.filme[1].cenas[0].cenario + "</li>");
+    document.write("</ol>")
+
+
+    document.write("<li>Cena 1</li>");
+	document.write("<ol>");
+    document.write("<li>" + resultado.filme[1].cenas[1].cena + "</li>");
+    document.write("<li>" + resultado.filme[1].cenas[1].duracao + "</li>");
+    document.write("<li>" + resultado.filme[1].cenas[1].cenario + "</li>");
+	document.write("</ol>");
+	document.write("</ol>");
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

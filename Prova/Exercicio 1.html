@@ -1,0 +1,86 @@
+<html> 
+<head>
+    <script type="text/javascript" src ="jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+         $("button").click(function(){
+            //liinha 
+            //criacao da tabela
+            var tabelaE= document.createElement("TABLE");
+            var tr= document.createElement("TR");
+            //criacao de coluna
+            var th = document.createElement("TH");
+            var th2 = document.createElement("TH");
+
+            //criacao dos textos das colunas
+            var textoColuna = document.createTextNode("Seleção-A");
+            var textoColuna2 = document.createTextNode("Seleção-B");
+            //adicionando os textos na coluna
+            th.appendChild(textoColuna);
+            th2.appendChild(textoColuna2);
+           //fim criacao
+
+
+            //adicionando as linhas na coluna
+            tr.appendChild(th);
+            tr.appendChild(th2);
+            //adicionando a coluna na tabela
+            tabelaE.appendChild(tr);
+
+            //linha 2
+            var tr2= document.createElement("TR");
+            //criacao de coluna
+            var td3 = document.createElement("TD");
+            var td4 = document.createElement("TD");
+
+            var textoColuna3 = document.createTextNode("Brasil");
+            var textoColuna4 = document.createTextNode("Argentina");
+            td3.appendChild(textoColuna3);
+            td4.appendChild(textoColuna4);
+
+
+
+            tr2.appendChild(td3);
+            tr2.appendChild(td4);
+
+            tabelaE.appendChild(tr2);
+
+
+            //linha 3
+
+            var tr3= document.createElement("TR");
+            //criacao de coluna
+            var td4 = document.createElement("TD");
+            var td5 = document.createElement("TD");
+
+            var textoColuna3 = document.createTextNode("Chile");
+            var textoColuna4 = document.createTextNode("Uruguai");
+            td4.appendChild(textoColuna3);
+            td5.appendChild(textoColuna4);
+
+
+
+            tr3.appendChild(td4);
+            tr3.appendChild(td5);
+
+            tabelaE.appendChild(tr3);
+
+
+            document.body.append(tabelaE);
+
+            
+    });
+});
+    </script>
+    </head>
+  <body>
+    <table> <tr>
+<th>Seleção-A</th> <th>Seleção-B</th>
+</tr> <tr>
+<td>Brasil</td> <td>Argentina</td>
+</tr> <tr>
+<td>Chile</td> <td>Uruguai</td>
+</tr> 
+    <button>Cria página</button> 
+  </body>
+   </html>

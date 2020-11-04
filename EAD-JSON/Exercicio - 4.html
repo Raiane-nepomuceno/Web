@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercicio 4</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		var games2 = '{"jogo":[{"nomeJogo":"Pac Man","Ano":2010,"personagens":[{"nomeP":"Personagem1","raridade":"média","preco":1500.00},{"nomeP":"Personagem2","raridade":"alta","preco":3502.53}]}'+
+            ',{"nomeJogo":"River Rade","Ano":1979,"personagens":[{"nomeP":"Personagem3","raridade":"surreal","preco":10000.00},{"nomeP":"Personagem4","raridade":"baixa","preco":500.25}]}]}';
+    var resultado = JSON.parse(games2);
+
+    //personagem - 0
+
+    document.write("<p>Jogos</p>");
+
+
+	var pac = resultado.jogo[0].nomeJogo; 
+	var ano_pac = resultado.jogo[0].Ano;
+	document.write("<br>");
+
+	document.write(pac);
+	document.write("<p>"+resultado.jogo[0].Ano+"</p>");
+
+	document.write("<p>Personagens:</p>");
+	document.write("<ol>");
+	document.write("<li>Personagem-0</li>");
+	document.write("<ol>")
+	document.write("<li>" + resultado.jogo[0].personagens[0].nomeP + "</li>");
+	document.write("<li>" + resultado.jogo[0].personagens[0].raridade + "</li>");
+	document.write("<li>" + resultado.jogo[0].personagens[0].preco + "</li>");
+	document.write("</ol>");
+    document.write("<li>Personagem-1</li>");
+	document.write("<ol>");
+	document.write("<li>" + resultado.jogo[0].personagens[1].nomeP + "</li>");
+	document.write("<li>" + resultado.jogo[0].personagens[1].raridade + "</li>");
+	document.write("<li>" + resultado.jogo[0].personagens[1].preco + "</li>");
+	document.write("</ol>");
+	document.write("</ol>");
+    document.write("<p>"+resultado.jogo[1].nomeJogo+"</p>");
+   document.write("<p>"+resultado.jogo[1].Ano+"</p>");
+	document.write("<p>Personagens:</p>");
+
+	document.write("<ol>")
+	document.write("<li>Personagem-0</li>");
+	document.write("<ol>")
+	document.write("<li>" + resultado.jogo[1].personagens[0].nomeP + "</li>");
+	document.write("<li>" + resultado.jogo[1].personagens[0].raridade + "</li>");
+	document.write("<li>" + resultado.jogo[1].personagens[0].preco + "</li>");
+	document.write("</ol>");
+	
+    document.write("<li>Personagem-1</li>");
+	document.write("<ol>");
+	document.write("<li>" + resultado.jogo[1].personagens[1].nomeP + "</li>");
+	document.write("<li>" + resultado.jogo[1].personagens[1].raridade + "</li>");
+	document.write("<li>" + resultado.jogo[1].personagens[1].preco + "</li>");
+	document.write("</ol>");
+	document.write("</ol>")
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

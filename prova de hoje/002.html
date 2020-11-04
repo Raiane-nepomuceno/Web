@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+  $.support.cors = true;
+  $.ajax({
+
+      url:"https://pw1ifsp.herokuapp.com/alunos", 
+      type: "GET",
+      success:function(result){
+                var str = "";
+                for(i=0;i<result.length;i++){
+                    for(j in result[i]){
+                        str+=j+":"+result[i][j]+"\t\t\t\t";
+                    }
+                    str+="\n";
+                }
+                alert(str);
+                var string = JSON.parse(str);
+
+        }
+    });
+});});
+$(document).ready(function(){
+$(".tabela").click(function(){
+    var tabela = document.creatElement("TABLE");
+  //criar tabela
+  var tabela = document.createElement("TABLE");
+  //criar colunas
+  var coluna1 = document.createElement("TD");
+  var coluna2 = document.createElement("TD");
+  var coluna3 = document.createElement("TD");
+  var coluna4 = document.createElement("TD");
+  var coluna5 = document.createElement("TD");
+  var coluna6 = document.createElement("TD");
+  var coluna7 = document.createElement("TD");
+
+  //criar linhas
+  var linha1=document.createElement("TR");
+  var linha2=document.createElement("TR");
+
+  //criando o texto da coluna
+  var coluna_texto1 = document.createTextNode("RA");
+  var coluna_texto2 = document.createTextNode("Nome");
+  var coluna_texto3 = document.createTextNode("Endereço");
+  var coluna_texto4 = document.createTextNode("Email");
+  var coluna_texto5 = document.createTextNode("Notas1");
+  var coluna_texto6 = document.createTextNode("Notas2");
+  var coluna_texto7 = document.createTextNode("Média");
+
+  //adicionando texto na coluna
+  coluna1.appendChild(coluna_texto1);
+  coluna2.appendChild(coluna_texto2);
+  coluna3.appendChild(coluna_texto3);
+  coluna4.appendChild(coluna_texto4);
+  coluna5.appendChild(coluna_texto5);
+  coluna6.appendChild(coluna_texto6);
+  coluna7.appendChild(coluna_texto7);
+  //adicionando colunas nas linhas
+    linha1.appendChild(coluna1);
+    linha1.appendChild(coluna2);
+
+
+    tabela.appendChild(linha1);
+
+
+    document.body.appendChild(tabela);
+
+});
+});
+
+
+</script>
+</head>
+<body>
+
+<button>Obtém registros</button>
+<button id="tabela">Tabela</button>
+
+</body>
+</html>

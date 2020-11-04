@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html> 
+ <head>  
+     <script type="text/javascript" src ="jquery.js"></script>
+     <script type="text/javascript">
+     var num;
+
+     $(document).ready(function(){
+     $(".entradaDados").click(function(){
+      //this é o seletor que dispara o click
+      var id_btn = $(this).attr("id");
+      
+      num = document.getElementById(id_btn).value;
+      document.getElementById("entrada").value =
+      document.getElementById("entrada").value + num;
+     });
+    });
+
+
+$(document).ready(function(){
+     $("#igual").click(function(){
+      //this é o seletor que dispara o click
+      //o val tem  o valor do campo texto do id 'entrada' 
+      var res = eval($("#entrada").val());
+      $("#entrada").val(res)
+      $("label").html("Resultado = "+$("#entrada").val());
+     });
+    });
+
+ 	// function entradaDados(num) {
+  //  		document.getElementById('entrada').value = document.getElementById('entrada').value + num;
+
+  //  	}
+   	// function soma(){
+   	// 	document.getElementById("entrada").value = document.getElementById("entrada").value + "+";
+   	// }
+   	// function multiplica(){
+    // 		document.getElementById("entrada").value = document.getElementById("entrada").value + " * ";
+  		
+   	// }
+   	// function calcula(){
+   	// 	var res = document.getElementById("entrada").value = eval(document.getElementById("entrada").value);
+   	// 		$("label").html=res;
+
+   	// }
+    $(document).ready(function(){
+     $("#limpar").click(function(){
+      //this é o seletor que dispara o click
+      //o val tem  o valor do campo texto do id 'entrada' 
+      var r = "";
+      $("#entrada").val(r);
+      $("label").html("Resultado = "+$("#entrada").val());
+     });
+    });
+
+   	// function limpar(){
+   	// 	var r = document.getElementById('entrada').value = " ";
+   	// 	$("label").append(r);
+    //   	}
+ 	
+     </script>  
+      </head>  
+      <body>
+       <input type="text" id="entrada"><br/><br/>   
+        <input type="button" class="entradaDados" id="n0" value="0" >  
+        <input type="button" class="entradaDados" id ="n1" value="1">   
+         <input type="button" class="entradaDados" id = "n2"value="2">   
+         <input type="button" class="entradaDados" id = "n3"value="3" >    
+         <input type="button" class="entradaDados" id = "n4"value="4">    
+         <input type="button" class="entradaDados" id = "n5"value="5">  
+         <input type="button" class="entradaDados" id = "n6"value="6"> 
+         <input type="button" class="entradaDados" id = "n7"value="7">  
+         <input type="button" class="entradaDados" id="n8"value="8">  
+         <input type="button" class="entradaDados" id = "n9"value="9">  
+         <input type="button" id="igual" value="=">   
+         <input type="button" id="limpar" value="limpar">  
+         <input type="button" class="entradaDados" id="soma" value="+"> 
+         <input type="button" class="entradaDados" id ="multiplica" value="*"> 
+         <label id="resultado">Resultado = </label>  </body> 
+         </html>

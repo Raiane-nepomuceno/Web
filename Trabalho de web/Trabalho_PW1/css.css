@@ -1,0 +1,53 @@
+		.formulario{
+			text-align: center;
+		}
+		.titulo{
+			text-align: center;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+			background: white;
+		}
+	 	.instrucoes{
+	 		text-align: left;
+			display: block;
+	 		margin: 0 30%;
+	 	}
+
+	 	.comida{
+	 		text-align: center;
+	 	}
+
+		.instrucoestop{
+	 		text-align: left;
+			display:block;
+			margin: 0 30%;
+			text-decoration:none;
+			font-size: 35px;
+			color:orange;
+		} 
+		#receita a:hover{
+			color:orange;
+			text-decoration:none;
+		}	
+		.instrucoeslink{
+	 		text-align: left;
+			display:block;
+			margin: 0 30%;
+			text-decoration:none;
+			color:orange;
+			font-size: 25px;
+	 	}
+		.card-title{
+			color:orange;
+		}
+		.card-text a{
+			text-decoration:none;
+			color:black;
+		}
+		.card-text a:hover{
+				    text-decoration:none;
+				    color:orange;
+		}
+		

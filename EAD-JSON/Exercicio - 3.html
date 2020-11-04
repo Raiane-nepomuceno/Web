@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercicio 3</title>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+			var gamesCerto = '{"jogo":[{"nomeJogo":"Pac Man","Ano":2010},'+'{"nomeJogo":"River Rade","Ano":1979}]}';
+			var resultado = JSON.parse(gamesCerto);
+			var str = resultado.jogo[0].nomeJogo;
+			var ano = resultado.jogo[0].Ano;
+
+			var ul ="<ul>";
+			var ul2 = "</ul>";
+			var categoria = "<p>"+"Jogo-1"+"</p>";
+			document.write(categoria);
+
+			document.write(ul);
+
+
+			var str2 = "<li>"+ str +"</li>";
+			document.write(str2);
+			var str3 = "<li>"+ ano +"</li>";
+			document.write(str3);
+
+
+			document.write(ul2);
+
+			var categoria2 = "<p>"+"Jogo-2"+"</p>";
+			//nome da categoria
+			document.write(categoria2);
+
+			document.write(ul);
+
+			//as informações
+			var nome_jogo = resultado.jogo[1].nomeJogo;
+			var ano2 = resultado.jogo[1].Ano;
+
+			//colocando dentro da lista
+			var info1 = "<li>"+ nome_jogo +"</li>";
+			var info2 = "<li>"+ ano2 +"</li>";
+
+			//adicionando no body
+			document.write(info1);
+			document.write(info2);
+
+
+			document.write(ul2);
+
+		</script>
+</head>
+<body>
+
+</body>
+</html>

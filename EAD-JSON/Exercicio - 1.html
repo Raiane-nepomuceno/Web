@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercicio 1</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	var receita = { 
+		'titulo': 'Bolo de cenoura','tempoDePreparo': "20 min",
+    	'ingredientes': ['3 ovos', '200 g farelo de aveia', '200 g açúcar','10 g de fermento biológico','2 cenouras médias','2/3 de um copo de óleo'],
+    	'preparo': ['bata os ovos, o óleo e as cenouras em um liquidificador','misture os demais ingredientes com o que foi batido no liquificador','coloque a massa em uma forma pequena untada com óleo e farinha sem glúten','coloque no formo por aproximadamente 30 min.']}
+    var i = 0;
+    var str = "";
+    var str2 = "<ul>";
+    var str3 = "</ul>"
+    document.write(str2);
+    //lista nao ordenada
+    for(i=0;i<6;i++)
+    {
+    	str = "<li>"+receita.ingredientes[i]+"</li>";
+    	document.write(str);
+
+	}
+	document.write(str3);
+	//modo de preparo lista ordenada
+	var str4="<ol>";
+	var str5="</ol>";
+	var str6="";
+	document.write(str4);
+	for(i=0;i<4;i++)
+	{
+		str6 = "<li>"+receita.preparo[i]+"</li>";
+		document.write(str6);
+	}
+	document.write(str5);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

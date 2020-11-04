@@ -1,0 +1,123 @@
+﻿<!DOCTYPE>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+
+
+<script language="javascript" type="text/javascript">
+
+// Posiciona o número digitado na tela
+function putNum(num) {
+   document.getElementById('tela').value = document.getElementById('tela').value + num;
+}
+
+// Limpa a tela
+function limpar() {
+   document.getElementById('tela').value= " ";
+}
+
+// Posiciona o operador na tela, caso um número tenha sido digitado
+function operator(oprt){
+	if( document.getElementById('tela').value != " ")
+	{ document.getElementById('tela').value = document.getElementById('tela').value + oprt;   }
+	else
+	{ alert("Por favor, digite um número antes do operador!");}     
+}
+
+// Realiza a conta
+function calculo() {
+	document.getElementById('tela').value = eval(document.getElementById('tela').value);
+}
+
+</script>
+
+</head>
+
+<body>
+
+
+<form name="calc">
+<table>
+
+<tr>
+<td colspan="4">
+<input type="text" name="tela" value="0" id="tela" align="right" maxlength="18" disabled="disabled">
+</td>
+</tr>
+
+<tr>
+	<td colspan="4" align="right">
+		<input name="clean" type="button" value="Limpar"  onclick="limpar()" />
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+		<input type="button" name="1" value="  1  "  onclick="putNum(1)">
+	</td>
+	<td>
+		<input type="button" name="2" value="  2  "  onclick="putNum(2)">
+	</td>
+	<td>
+		<input type="button" name="3" value="  3  "  onclick="putNum(3)">
+	</td>
+	<td>
+		<input type="button" name="-" value="  -  "  onclick="operator('-')">
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<input type="button" name="4" value="  4  " onclick="putNum(4)">
+	</td>
+	<td>
+		<input type="button" name="5" value="  5  " onclick="putNum(5)">
+	</td>
+	<td>
+		<input type="button" name="6" value="  6  " onclick="putNum(6)">
+	</td>
+	<td>
+		<input type="button" name="*" value=" *  "  onclick="operator('*')">
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<input type="button" name="1" value="  7  "   onclick="putNum(7)">
+	</td>
+	<td>
+		<input type="button" name="8" value="  8  "   onclick="putNum(8)">
+	</td>
+	<td>
+		<input type="button" name="9" value="  9  "   onclick="putNum(9)">
+	</td>
+	<td>
+		<input type="button" name="/" value="  /  "   onclick="operator('/')">
+	</td>
+</tr>
+
+
+<tr>
+	<td>
+		<input type="button" name="0" value="  0  "   onclick="putNum(0)">
+	</td>
+	<td>
+		<input type="button" name="." value="  .   "   onclick="putNum('.')">
+	</td>
+	<td>
+		<input type="button" name="=" value="  =  "   onclick="calculo()">
+	</td>
+	<td>
+		<input type="button" name="+" value=" +  "   onclick="operator('+')">
+	</td>
+</tr>
+
+</table>
+</form>
+
+</body>
+
+</html>
